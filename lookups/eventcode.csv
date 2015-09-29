@@ -1,0 +1,9 @@
+EventCode,EventDescription
+1,"Process Create"
+2,"File Create Time"
+3,"Network Connect"
+5,"Process Terminate"
+6,"Driver Load"
+7,"Image Load"
+8,"Create Remote Thread"
+255,"Error"
