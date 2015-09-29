@@ -1,4 +1,4 @@
-TA-Microsoft-Sysmon v0.3.1
+TA-Microsoft-Sysmon v0.3.1.1
 ----------------------------	
 	
 	Author: ahall (original). japger, dherrald, jbrodsky (update).
@@ -16,6 +16,10 @@ Updates
 	Additional CIM compliance added
 	Example config added
 	Revved to version 0.3.1 to match current Sysmon version
+
+	0.3.1.1
+	-------
+	Fixed typos in eventtypes.conf and props.conf
 
 
 Using this TA
