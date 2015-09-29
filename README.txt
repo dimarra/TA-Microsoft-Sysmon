@@ -1,8 +1,8 @@
-TA-Microsoft-Sysmon v0.3.1.1
+TA-Microsoft-Sysmon v3.1.1
 ----------------------------	
 	
 	Author: ahall (original). japger, dherrald, jbrodsky (update).
-	Version/Date: 0.3.1 09/28/2015
+	Version/Date: 0.3.1 09/29/2015
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
 	Input Requirements: Sysmon 3.1 installed on Windows UF
@@ -17,8 +17,9 @@ Updates
 	Example config added
 	Revved to version 0.3.1 to match current Sysmon version
 
-	0.3.1.1
+	3.1.1
 	-------
+	Major modification of the version to better align with SplunkBase.
 	Fixed typos in eventtypes.conf and props.conf
 
 
