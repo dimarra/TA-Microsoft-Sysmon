@@ -2,10 +2,10 @@ TA-Microsoft-Sysmon v3.1.1
 ----------------------------	
 	
 	Author: ahall (original). japger, dherrald, jbrodsky (update).
-	Version/Date: 0.3.1 09/29/2015
+	Version/Date: 3.2.1 04/20/2016
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
-	Input Requirements: Sysmon 3.1 installed on Windows UF
+	Input Requirements: Sysmon 3.1 or later installed with Windows Universal Forwarder
 
 Updates 
 ----------------------------
@@ -21,6 +21,13 @@ Updates
 	-------
 	Major modification of the version to better align with SplunkBase.
 	Fixed typos in eventtypes.conf and props.conf
+
+	3.2.1
+	--------
+	Minor updates to align with sysmon version 3.21. For details see:
+	  https://github.com/splunk/TA-microsoft-sysmon/issues/1
+	  https://github.com/splunk/TA-microsoft-sysmon/issues/2
+	  https://github.com/splunk/TA-microsoft-sysmon/issues/3
 
 
 Using this TA
