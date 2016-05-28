@@ -2,7 +2,7 @@ TA-Microsoft-Sysmon v3.2.1
 ----------------------------	
 	
 	Author: ahall (original). japger, dherrald, jbrodsky (update).
-	Version/Date: 3.2.1 04/20/2016
+	Version/Date: 3.2.2 05/28/2016
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
 	Input Requirements: Sysmon 3.1 or later installed with Windows Universal Forwarder
