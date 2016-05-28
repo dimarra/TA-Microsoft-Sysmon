@@ -29,6 +29,11 @@ Updates
 	  https://github.com/splunk/TA-microsoft-sysmon/issues/2
 	  https://github.com/splunk/TA-microsoft-sysmon/issues/3
 
+	3.2.2
+	--------
+	Minor updates to extract various hash values into individual fields for convenience:
+	  https://github.com/splunk/TA-microsoft-sysmon/issues/4
+
 
 Using this TA
 ----------------------------
