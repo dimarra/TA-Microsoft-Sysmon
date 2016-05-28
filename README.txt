@@ -1,4 +1,4 @@
-TA-Microsoft-Sysmon v3.2.1
+TA-Microsoft-Sysmon v3.2.2
 ----------------------------	
 	
 	Author: ahall (original). japger, dherrald, jbrodsky (update).
