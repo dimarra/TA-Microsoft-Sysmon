@@ -1,8 +1,8 @@
-TA-Microsoft-Sysmon v3.2.2  
+TA-Microsoft-Sysmon v3.2.3  
 ----------------------------	
 	
 	Author: ahall (original). japger, dherrald, jbrodsky (update).
-	Version/Date: 3.2.2 05/28/2016
+	Version/Date: 3.2.3 05/31/2016
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
 	Input Requirements: Sysmon 3.1 or later installed with Windows Universal Forwarder
@@ -33,6 +33,12 @@ Updates
 	--------
 	Minor updates to extract various hash values into individual fields for convenience:
 	  https://github.com/splunk/TA-microsoft-sysmon/issues/4
+
+	3.2.3
+	--------
+	Minor updates to add workflow actions via pull request and subsequent fine tuning.
+	  See: https://github.com/splunk/TA-microsoft-sysmon/pull/5
+          See: https://github.com/splunk/TA-microsoft-sysmon/pull/6
 
 
 Using this TA
