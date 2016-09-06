@@ -8,4 +8,5 @@ EventCode,EventDescription
 7,"Image Load"
 8,"Create Remote Thread"
 9,"Raw Access Read"
+10,"Process Access"
 255,"Error"
