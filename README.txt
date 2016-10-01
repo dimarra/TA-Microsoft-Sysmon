@@ -96,89 +96,78 @@ Sample Config
 
 **** CUT HERE ****
 
-<Sysmon schemaversion="3.1.0">
-  <HashAlgorithms>*</HashAlgorithms>
+<Sysmon schemaversion="3.1">
+  <HashAlgorithms>SHA1</HashAlgorithms>
   <EventFiltering>
-		<!-- Log all drivers except if the signature -->
-		<!-- contains Microsoft or Windows -->
-	<DriverLoad onmatch="exclude">
-		<Signature condition="contains">microsoft</Signature>
-		<Signature condition="contains">windows</Signature>
-	</DriverLoad>
-    	<!-- Exclude certain processes that cause high event volumes -->
-   	<ProcessCreate default="include">
-		<Image condition="contains">splunk</Image>
-        <Image condition="contains">streamfwd</Image>
-        <Image condition="contains">splunkd</Image>
-		<Image condition="contains">splunkD</Image>
-		<Image condition="contains">splunk</Image>
-		<Image condition="contains">splunk-optimize</Image>
-		<Image condition="contains">splunk-MonitorNoHandle</Image>
-		<Image condition="contains">splunk-admon</Image>
-		<Image condition="contains">splunk-netmon</Image>
-		<Image condition="contains">splunk-regmon</Image>
-		<Image condition="contains">splunk-winprintmon</Image>
-		<Image condition="contains">btool</Image>
-		<Image condition="contains">PYTHON</Image>
-	</ProcessCreate>
-	<ProcessTerminate default="include">
-		<Image condition="contains">splunk</Image>
-		<Image condition="contains">streamfwd</Image>
-		<Image condition="contains">splunkd</Image>
-		<Image condition="contains">splunkD</Image>
-		<Image condition="contains">splunk</Image>
-		<Image condition="contains">splunk-optimize</Image>
-		<Image condition="contains">splunk-MonitorNoHandle</Image>
-		<Image condition="contains">splunk-admon</Image>
-		<Image condition="contains">splunk-netmon</Image>
-		<Image condition="contains">splunk-regmon</Image>
-		<Image condition="contains">splunk-winprintmon</Image>
-		<Image condition="contains">btool</Image>
-		<Image condition="contains">PYTHON</Image>
-	</ProcessTerminate>
-	<FileCreateTime default="include">
-		<Image condition="contains">splunk</Image>
-		<Image condition="contains">streamfwd</Image>
-		<Image condition="contains">splunkd</Image>
-		<Image condition="contains">splunkD</Image>
-		<Image condition="contains">splunk</Image>
-		<Image condition="contains">splunk-optimize</Image>
-		<Image condition="contains">splunk-MonitorNoHandle</Image>
-		<Image condition="contains">splunk-admon</Image>
-		<Image condition="contains">splunk-netmon</Image>
-		<Image condition="contains">splunk-regmon</Image>
-		<Image condition="contains">splunk-winprintmon</Image>
-		<Image condition="contains">btool</Image>
-		<Image condition="contains">PYTHON</Image>
-    	</FileCreateTime>
-	<ImageLoad default="include">
-		<Image condition="contains">splunk</Image>
-		<Image condition="contains">streamfwd</Image>
-		<Image condition="contains">splunkd</Image>
-		<Image condition="contains">splunkD</Image>
-		<Image condition="contains">splunk</Image>
-		<Image condition="contains">splunk-optimize</Image>
-		<Image condition="contains">splunk-MonitorNoHandle</Image>
-		<Image condition="contains">splunk-admon</Image>
-		<Image condition="contains">splunk-netmon</Image>
-		<Image condition="contains">splunk-regmon</Image>
-		<Image condition="contains">splunk-winprintmon</Image>
-		<Image condition="contains">btool</Image>
-		<Image condition="contains">PYTHON</Image>
-	</ImageLoad>
-     	<NetworkConnect default="include">
-		<Image condition="contains">splunkD</Image>
-		<Image condition="contains">splunk</Image>
-		<Image condition="contains">splunk-optimize</Image>
-		<Image condition="contains">splunk-MonitorNoHandle</Image>
-		<Image condition="contains">splunk-admon</Image>
-		<Image condition="contains">splunk-netmon</Image>
-		<Image condition="contains">splunk-regmon</Image>
-		<Image condition="contains">splunk-winprintmon</Image>
-		<Image condition="contains">btool</Image>
-		<Image condition="contains">PYTHON</Image>
-   	</NetworkConnect>
-  </EventFiltering>	
+    <!-- Log all drivers except if the signature -->
+    <!-- contains Microsoft or Windows -->
+    <DriverLoad onmatch="exclude">
+      <Signature condition="contains">microsoft</Signature>
+      <Signature condition="contains">windows</Signature>
+    </DriverLoad>
+    <!-- Exclude certain processes that cause high event volumes -->
+    <ProcessCreate onmatch="exclude">
+      <Image condition="contains">splunk</Image>
+      <Image condition="contains">streamfwd</Image>
+      <Image condition="contains">splunkd</Image>
+      <Image condition="contains">splunkD</Image>
+      <Image condition="contains">splunk</Image>
+      <Image condition="contains">splunk-optimize</Image>
+      <Image condition="contains">splunk-MonitorNoHandle</Image>
+      <Image condition="contains">splunk-admon</Image>
+      <Image condition="contains">splunk-netmon</Image>
+      <Image condition="contains">splunk-regmon</Image>
+      <Image condition="contains">splunk-winprintmon</Image>
+      <Image condition="contains">btool</Image>
+      <Image condition="contains">PYTHON</Image>
+    </ProcessCreate>
+    <ProcessTerminate onmatch="exclude">
+      <Image condition="contains">splunk</Image>
+      <Image condition="contains">streamfwd</Image>
+      <Image condition="contains">splunkd</Image>
+      <Image condition="contains">splunkD</Image>
+      <Image condition="contains">splunk</Image>
+      <Image condition="contains">splunk-optimize</Image>
+      <Image condition="contains">splunk-MonitorNoHandle</Image>
+      <Image condition="contains">splunk-admon</Image>
+      <Image condition="contains">splunk-netmon</Image>
+      <Image condition="contains">splunk-regmon</Image>
+      <Image condition="contains">splunk-winprintmon</Image>
+      <Image condition="contains">btool</Image>
+      <Image condition="contains">PYTHON</Image>
+    </ProcessTerminate>
+    <FileCreateTime onmatch="exclude">
+      <Image condition="contains">splunk</Image>
+      <Image condition="contains">streamfwd</Image>
+      <Image condition="contains">splunkd</Image>
+      <Image condition="contains">splunkD</Image>
+      <Image condition="contains">splunk</Image>
+      <Image condition="contains">splunk-optimize</Image>
+      <Image condition="contains">splunk-MonitorNoHandle</Image>
+      <Image condition="contains">splunk-admon</Image>
+      <Image condition="contains">splunk-netmon</Image>
+      <Image condition="contains">splunk-regmon</Image>
+      <Image condition="contains">splunk-winprintmon</Image>
+      <Image condition="contains">btool</Image>
+      <Image condition="contains">PYTHON</Image>
+    </FileCreateTime>
+    <ImageLoad onmatch="exclude">
+      <Image condition="contains">splunk</Image>
+      <Image condition="contains">streamfwd</Image>
+      <Image condition="contains">splunkd</Image>
+      <Image condition="contains">splunkD</Image>
+      <Image condition="contains">splunk</Image>
+      <Image condition="contains">splunk-optimize</Image>
+      <Image condition="contains">splunk-MonitorNoHandle</Image>
+      <Image condition="contains">splunk-admon</Image>
+      <Image condition="contains">splunk-netmon</Image>
+      <Image condition="contains">splunk-regmon</Image>
+      <Image condition="contains">splunk-winprintmon</Image>
+      <Image condition="contains">btool</Image>
+      <Image condition="contains">PYTHON</Image>
+    </ImageLoad>
+  </EventFiltering>
 </Sysmon>
+
 
 **** CUT HERE ****
