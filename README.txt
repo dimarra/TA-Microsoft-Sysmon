@@ -1,14 +1,48 @@
-TA-Microsoft-Sysmon v3.2.3  
+TA-Microsoft-Sysmon v4.0.0  
 ----------------------------	
 	
-	Author: ahall (original). japger, dherrald, jbrodsky (update).
-	Version/Date: 3.2.3 05/31/2016
+	Original Author: Adrian Hall (original) 
+	Current maintainers: Jim Apger, Dave Herrald, James Brosdsky 
+	Contributors:	https://github.com/dstaulcu, 
+	https://github.com/MikeKemmerer
+	Version/Date: 4.0.0 10/01/2016
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
-	Input Requirements: Sysmon 3.1 or later installed with Windows Universal Forwarder
+	Input Requirements: Sysmon 3.1 or later installed with Splunk Universal Forwarder for Windows
 
-Updates 
+Update History
 ----------------------------
+
+	4.0.0
+	--------
+	Minor updates to support Sysmon V4 and optimize the hash field extraction. 
+	See: https://github.com/splunk/TA-microsoft-sysmon/pull/8
+	See: https://github.com/splunk/TA-microsoft-sysmon/pull/9
+	See: https://github.com/splunk/TA-microsoft-sysmon/pull/10
+	See: https://github.com/splunk/TA-microsoft-sysmon/pull/11
+
+	3.2.3
+	--------
+	Minor updates to add workflow actions via pull request and subsequent fine tuning.
+	See: https://github.com/splunk/TA-microsoft-sysmon/pull/5
+	See: https://github.com/splunk/TA-microsoft-sysmon/pull/6
+
+	3.2.2
+	--------
+	Minor updates to extract various hash values into individual fields for convenience:
+	https://github.com/splunk/TA-microsoft-sysmon/issues/4
+
+	3.2.1
+	--------
+	Minor updates to align with sysmon version 3.21. For details see:
+	https://github.com/splunk/TA-microsoft-sysmon/issues/1
+	https://github.com/splunk/TA-microsoft-sysmon/issues/2
+	https://github.com/splunk/TA-microsoft-sysmon/issues/3
+
+	3.1.1
+	-------
+	Major modification of the version to better align with SplunkBase.
+	Fixed typos in eventtypes.conf and props.conf
 
 	0.3.1
 	-----
@@ -16,29 +50,6 @@ Updates
 	Additional CIM compliance added
 	Example config added
 	Revved to version 0.3.1 to match current Sysmon version
-
-	3.1.1
-	-------
-	Major modification of the version to better align with SplunkBase.
-	Fixed typos in eventtypes.conf and props.conf
-
-	3.2.1
-	--------
-	Minor updates to align with sysmon version 3.21. For details see:
-	  https://github.com/splunk/TA-microsoft-sysmon/issues/1
-	  https://github.com/splunk/TA-microsoft-sysmon/issues/2
-	  https://github.com/splunk/TA-microsoft-sysmon/issues/3
-
-	3.2.2
-	--------
-	Minor updates to extract various hash values into individual fields for convenience:
-	  https://github.com/splunk/TA-microsoft-sysmon/issues/4
-
-	3.2.3
-	--------
-	Minor updates to add workflow actions via pull request and subsequent fine tuning.
-	  See: https://github.com/splunk/TA-microsoft-sysmon/pull/5
-          See: https://github.com/splunk/TA-microsoft-sysmon/pull/6
 
 
 Using this TA
@@ -64,7 +75,9 @@ Support
 	This is a community supported TA. As such, post to answers.splunk.com
 	and reference it. Someone should be with you shortly.
 
-Example Config
+	Pull requests via github are welcome!
+
+Sample Config
 ----------------------------
 
 	Sysmon is capable of delivering a large amount of events into your
@@ -83,8 +96,8 @@ Example Config
 
 **** CUT HERE ****
 
-<Sysmon schemaversion="2.0">
-  <HashAlgorithms>SHA1</HashAlgorithms>
+<Sysmon schemaversion="3.1.0">
+  <HashAlgorithms>*</HashAlgorithms>
   <EventFiltering>
 		<!-- Log all drivers except if the signature -->
 		<!-- contains Microsoft or Windows -->
@@ -95,8 +108,8 @@ Example Config
     	<!-- Exclude certain processes that cause high event volumes -->
    	<ProcessCreate default="include">
 		<Image condition="contains">splunk</Image>
-        	<Image condition="contains">streamfwd</Image>
-        	<Image condition="contains">splunkd</Image>
+        <Image condition="contains">streamfwd</Image>
+        <Image condition="contains">splunkd</Image>
 		<Image condition="contains">splunkD</Image>
 		<Image condition="contains">splunk</Image>
 		<Image condition="contains">splunk-optimize</Image>
@@ -153,7 +166,19 @@ Example Config
 		<Image condition="contains">btool</Image>
 		<Image condition="contains">PYTHON</Image>
 	</ImageLoad>
-   </EventFiltering>
+     	<NetworkConnect default="include">
+		<Image condition="contains">splunkD</Image>
+		<Image condition="contains">splunk</Image>
+		<Image condition="contains">splunk-optimize</Image>
+		<Image condition="contains">splunk-MonitorNoHandle</Image>
+		<Image condition="contains">splunk-admon</Image>
+		<Image condition="contains">splunk-netmon</Image>
+		<Image condition="contains">splunk-regmon</Image>
+		<Image condition="contains">splunk-winprintmon</Image>
+		<Image condition="contains">btool</Image>
+		<Image condition="contains">PYTHON</Image>
+   	</NetworkConnect>
+  </EventFiltering>	
 </Sysmon>
 
 **** CUT HERE ****
