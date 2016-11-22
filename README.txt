@@ -4,7 +4,7 @@ TA-Microsoft-Sysmon v5.0.0
 	Original Author: Adrian Hall
 	Current maintainers: Jim Apger, Dave Herrald, James Brosdsky 
 	Contributors:	https://github.com/dstaulcu, https://github.com/MikeKemmerer
-	Version/Date: 5.0.0 11/19/2016
+	Version/Date: 5.0.0 11/22/2016
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
 	Input Requirements: Sysmon 3.1 or later installed with Splunk Universal Forwarder for Windows
@@ -14,7 +14,7 @@ Update History
 
   5.0.0
   --------
-  Updates to support sysmon V5 and add additional CIM-compliant field extractions
+  Updates to support sysmon V5
   Note the sample configuration included below was modified to exclued the ImageLoad section which was found to be causing BSOD on some Windows 7 test systems.
   Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
 
