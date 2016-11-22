@@ -1,17 +1,22 @@
-TA-Microsoft-Sysmon v4.0.0  
+TA-Microsoft-Sysmon v5.0.0  
 ----------------------------	
 	
-	Original Author: Adrian Hall (original) 
+	Original Author: Adrian Hall
 	Current maintainers: Jim Apger, Dave Herrald, James Brosdsky 
-	Contributors:	https://github.com/dstaulcu, 
-	https://github.com/MikeKemmerer
-	Version/Date: 4.0.0 10/01/2016
+	Contributors:	https://github.com/dstaulcu, https://github.com/MikeKemmerer
+	Version/Date: 5.0.0 11/19/2016
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
 	Input Requirements: Sysmon 3.1 or later installed with Splunk Universal Forwarder for Windows
 
 Update History
 ----------------------------
+
+  5.0.0
+  --------
+  Updates to support sysmon V5 and add additional CIM-compliant field extractions
+  Note the sample configuration included below was modified to exclued the ImageLoad section which was found to be causing BSOD on some Windows 7 test systems.
+  Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
 
 	4.0.0
 	--------
@@ -63,11 +68,11 @@ Using this TA
 	Ensure that you have at least version 6.2.0 universal forwarders.
 	This is because of the Windows XML event log format.
 
-http://blogs.splunk.com/2014/11/04/splunk-6-2-feature-overview-xml-event-logs/
+  http://blogs.splunk.com/2014/11/04/splunk-6-2-feature-overview-xml-event-logs/
 
 	For additional info on Sysmon see here:
 
-http://blogs.splunk.com/2014/11/24/monitoring-network-traffic-with-sysmon-and-splunk/
+  http://blogs.splunk.com/2014/11/24/monitoring-network-traffic-with-sysmon-and-splunk/
 
 Support
 ----------------------------
@@ -82,9 +87,9 @@ Sample Config
 
 	Sysmon is capable of delivering a large amount of events into your
 	Splunk instance. The following configuration, loaded into each
-	system running Sysmon 3.1, will reduce the amount of data considerably.
+	system running Sysmon 3.1 or greater, will reduce the amount of data considerably.
 	Special thanks go to Jeff Walzer from the University of Pittsburgh for
-	helping to test this (walzer@pitt.edu).
+	originally helping to test this (walzer@pitt.edu).
 
 	Load this via sysmon -c (filename) from an admin-level command prompt.
 	(after you have placed it in a text file). You may get some 
@@ -96,8 +101,8 @@ Sample Config
 
 **** CUT HERE ****
 
-<Sysmon schemaversion="3.1">
-  <HashAlgorithms>SHA1</HashAlgorithms>
+<Sysmon schemaversion="3.2">
+  <HashAlgorithms>*</HashAlgorithms>
   <EventFiltering>
     <!-- Log all drivers except if the signature -->
     <!-- contains Microsoft or Windows -->
@@ -151,21 +156,6 @@ Sample Config
       <Image condition="contains">btool</Image>
       <Image condition="contains">PYTHON</Image>
     </FileCreateTime>
-    <ImageLoad onmatch="exclude">
-      <Image condition="contains">splunk</Image>
-      <Image condition="contains">streamfwd</Image>
-      <Image condition="contains">splunkd</Image>
-      <Image condition="contains">splunkD</Image>
-      <Image condition="contains">splunk</Image>
-      <Image condition="contains">splunk-optimize</Image>
-      <Image condition="contains">splunk-MonitorNoHandle</Image>
-      <Image condition="contains">splunk-admon</Image>
-      <Image condition="contains">splunk-netmon</Image>
-      <Image condition="contains">splunk-regmon</Image>
-      <Image condition="contains">splunk-winprintmon</Image>
-      <Image condition="contains">btool</Image>
-      <Image condition="contains">PYTHON</Image>
-    </ImageLoad>
   </EventFiltering>
 </Sysmon>
 
