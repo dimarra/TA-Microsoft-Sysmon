@@ -14,4 +14,7 @@ EventCode,EventDescription
 13,"Registry value set"
 14,"Registry object renamed"
 15,"File stream created"
+16,"Sysmon Configuration Changed"
+17,"Pipe Created"
+18,"Pipe Connected"
 255,"Error"
