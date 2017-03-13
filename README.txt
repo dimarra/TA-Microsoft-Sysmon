@@ -1,10 +1,10 @@
-TA-Microsoft-Sysmon v5.0.0  
+TA-Microsoft-Sysmon v6.0.0  
 ----------------------------	
 	
 	Original Author: Adrian Hall
 	Current maintainers: Jim Apger, Dave Herrald, James Brosdsky 
 	Contributors:	https://github.com/dstaulcu, https://github.com/MikeKemmerer
-	Version/Date: 5.0.0 11/22/2016
+	Version/Date: 6.0.0 3/12/2016
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
 	Input Requirements: Sysmon 3.1 or later installed with Splunk Universal Forwarder for Windows
@@ -12,11 +12,17 @@ TA-Microsoft-Sysmon v5.0.0
 Update History
 ----------------------------
 
-  5.0.0
-  --------
-  Updates to support sysmon V5
-  Note the sample configuration included below was modified to exclued the ImageLoad section which was found to be causing BSOD on some Windows 7 test systems.
-  Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
+ 	6.0.0
+ 	--------
+ 	Updates to support sysmon V6
+ 	Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
+
+
+  	5.0.0
+  	--------
+  	Updates to support sysmon V5
+  	Note the sample configuration included below was modified to exclued the ImageLoad section which was found to be causing BSOD on some Windows 7 test systems.
+  	Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
 
 	4.0.0
 	--------
