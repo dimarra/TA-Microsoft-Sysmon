@@ -12,6 +12,11 @@ TA-Microsoft-Sysmon v6.0.0
 Update History
 ----------------------------
 
+ 	6.0.1
+ 	--------
+ 	Field extractions for MD5, SHA1, SHA256, IMPHASH
+	Added workflow action to invoke VirusTotal web report from MD5, SHA1, or SHA256 fields. 	
+	
  	6.0.0
  	--------
  	Updates to support sysmon V6
