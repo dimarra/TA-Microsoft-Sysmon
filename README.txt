@@ -12,6 +12,10 @@ TA-Microsoft-Sysmon v6.0.0
 Update History
 ----------------------------
 
+ 	6.0.1
+ 	--------
+ 	Field extractions for MD5, SHA1, SHA256, IMPHASH
+	
  	6.0.0
  	--------
  	Updates to support sysmon V6
