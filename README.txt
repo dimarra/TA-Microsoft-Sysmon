@@ -4,7 +4,7 @@ TA-Microsoft-Sysmon v6.0.1
 	Original Author: Adrian Hall
 	Current maintainers: Jim Apger, Dave Herrald, James Brosdsky 
 	Contributors:	https://github.com/dstaulcu, https://github.com/MikeKemmerer
-	Version/Date: 6.0.0 3/12/2016
+	Version/Date: 6.0.1 3/17/2016
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
 	Input Requirements: Sysmon 3.1 or later installed with Splunk Universal Forwarder for Windows
@@ -15,6 +15,8 @@ Update History
  	6.0.1
  	--------
  	Field extractions for MD5, SHA1, SHA256, IMPHASH
+	Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
+
 	
  	6.0.0
  	--------
