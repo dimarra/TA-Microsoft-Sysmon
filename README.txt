@@ -1,4 +1,4 @@
-TA-Microsoft-Sysmon v6.0.0  
+TA-Microsoft-Sysmon v6.0.1  
 ----------------------------	
 	
 	Original Author: Adrian Hall
