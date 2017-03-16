@@ -100,8 +100,23 @@ Support
 
 	Pull requests via github are welcome!
 
-Sample Config
+Recommended Configuration
 ----------------------------
+We strongly recommend that you use the popular Sysmon configuration shared by SwiftOnSecurity 
+as your starting point:
+
+https://github.com/SwiftOnSecurity/sysmon-config
+
+Previously Recommended Configuration
+----------------------------
+	3/16/2017 - The following configuration guidance was inlcuded historically
+	but should now be considered deprecated. We suggest instead that you use the SwiftOnSecurity
+	configuration as a starting point, and tune it to meet your needs. You may choose to
+	use elements of the legacy configuration below, particularly if you are interested
+	in exluding common splunk process names. NOTE: If you choose to excude certain events
+	based on file name, please be aware that this could potentially be abused by an attacker
+	to hide malicious activity by choosing an excluded name for their malware. If you
+	are not willing to accept this risk, do not use the configuration below.
 
 	Sysmon is capable of delivering a large amount of events into your
 	Splunk instance. The following configuration, loaded into each
@@ -117,7 +132,7 @@ Sample Config
 	For additional Sysmon filtering, remove the entire ImageLoad 
 	section.
 
-**** CUT HERE ****
+----------------------------
 
 <Sysmon schemaversion="3.2">
   <HashAlgorithms>*</HashAlgorithms>
@@ -178,4 +193,4 @@ Sample Config
 </Sysmon>
 
 
-**** CUT HERE ****
+----------------------------
