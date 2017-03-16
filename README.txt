@@ -2,7 +2,7 @@ TA-Microsoft-Sysmon v6.0.1
 ----------------------------	
 	
 	Original Author: Adrian Hall
-	Current maintainers: Jim Apger, Dave Herrald, James Brosdsky 
+	Current maintainers: Jim Apger, Dave Herrald, James Brodsky 
 	Contributors:	https://github.com/dstaulcu, https://github.com/MikeKemmerer
 	Version/Date: 6.0.1 3/17/2016
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
