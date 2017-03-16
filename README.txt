@@ -113,10 +113,11 @@ Previously Recommended Configuration
 	but should now be considered deprecated. We suggest instead that you use the SwiftOnSecurity
 	configuration as a starting point, and tune it to meet your needs. You may choose to
 	use elements of the legacy configuration below, particularly if you are interested
-	in exluding common splunk process names. NOTE: If you choose to excude certain events
-	based on file name, please be aware that this could potentially be abused by an attacker
-	to hide malicious activity by choosing an excluded name for their malware. If you
-	are not willing to accept this risk, do not use the configuration below.
+	in exluding common Splunk image/file names from creating Sysmon events. 
+	NOTE: If you choose to excude certain events based on file name, please be aware 
+	that this could potentially be abused by an attacker to hide malicious activity by 
+	choosing an excluded name for their malware. If you are not willing to accept this 
+	risk, do not use the configuration below.
 
 	Sysmon is capable of delivering a large amount of events into your
 	Splunk instance. The following configuration, loaded into each
@@ -133,7 +134,6 @@ Previously Recommended Configuration
 	section.
 
 ----------------------------
-
 <Sysmon schemaversion="3.2">
   <HashAlgorithms>*</HashAlgorithms>
   <EventFiltering>
@@ -191,6 +191,4 @@ Previously Recommended Configuration
     </FileCreateTime>
   </EventFiltering>
 </Sysmon>
-
-
 ----------------------------
