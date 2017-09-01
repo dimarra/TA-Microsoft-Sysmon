@@ -1,15 +1,20 @@
-TA-Microsoft-Sysmon v6.0.1  
+TA-Microsoft-Sysmon v6.0.2
 ----------------------------	
 	
 	Original Author: Adrian Hall
 	Current maintainers: Jim Apger, Dave Herrald, James Brodsky 
-	Contributors:	https://github.com/dstaulcu, https://github.com/MikeKemmerer
-	Version/Date: 6.0.1 3/17/2016
+	Contributors:	https://github.com/dstaulcu, https://github.com/MikeKemmerer, https://github.com/trogdorsey
+	Version/Date: 6.0.2 9/1/2017
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
 
 Update History
 ----------------------------
+
+        6.0.2
+ 	--------
+ 	Field extractions for Added field aliases for cmdline, parent_process, and parent_process_id
+	Special thanks to David Dorsey (https://github.com/trogdorsey) for this contribution.
 
  	6.0.1
  	--------
@@ -26,8 +31,9 @@ Update History
   	5.0.0
   	--------
   	Updates to support sysmon V5
-  	Note the sample configuration included below was modified to exclued the ImageLoad section which was found to be causing BSOD on some Windows 7 test systems.
-  	Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
+  	Note the sample configuration included below was modified to exclued the ImageLoad section which was found 
+	to be causing BSOD on some Windows 7 test systems. Special thanks to David Staulcup 
+	(https://github.com/dstaulcu) for ongoing assistance and contributions 
 
 	4.0.0
 	--------
