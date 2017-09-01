@@ -15,26 +15,30 @@ Update History
 
         6.0.2
  	--------
- 	Field extractions for Added field aliases for cmdline, parent_process, and parent_process_id
+ 	Field extractions for Added field aliases for cmdline, parent_process, and 
+	parent_process_id.
 	Special thanks to David Dorsey (https://github.com/trogdorsey) for this contribution.
 
  	6.0.1
  	--------
  	Field extractions for MD5, SHA1, SHA256, IMPHASH
-	Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
+	Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing 
+	assistance and contributions 
 
 	
  	6.0.0
  	--------
  	Updates to support sysmon V6
- 	Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
+ 	Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing 
+	assistance and contributions 
 
 
   	5.0.0
   	--------
   	Updates to support sysmon V5
-  	Note the sample configuration included below was modified to exclued the ImageLoad section which was found 
-	to be causing BSOD on some Windows 7 test systems. Special thanks to David Staulcup 
+  	Note the sample configuration included below was modified to exclued the 
+	ImageLoad section which was found to be causing BSOD on some Windows 7 test 
+	systems. Special thanks to David Staulcup 
 	(https://github.com/dstaulcu) for ongoing assistance and contributions 
 
 	4.0.0
@@ -47,7 +51,8 @@ Update History
 
 	3.2.3
 	--------
-	Minor updates to add workflow actions via pull request and subsequent fine tuning.
+	Minor updates to add workflow actions via pull request and subsequent fine 
+	tuning.
 	See: https://github.com/splunk/TA-microsoft-sysmon/pull/5
 	See: https://github.com/splunk/TA-microsoft-sysmon/pull/6
 
