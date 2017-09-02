@@ -15,8 +15,8 @@ Update History
 
         6.0.2
  	--------
- 	Field extractions for Added field aliases for cmdline, parent_process, and 
-	parent_process_id.
+ 	Field extractions added including but not limited to cmdline, parent_process, 
+	and parent_process_id.
 	Special thanks to David Dorsey (https://github.com/trogdorsey) for this contribution.
 
  	6.0.1
