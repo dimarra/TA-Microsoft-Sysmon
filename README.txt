@@ -6,13 +6,18 @@ TA-Microsoft-Sysmon v6.0.3
 	Contributors:	https://github.com/dstaulcu
 			https://github.com/MikeKemmerer
 			https://github.com/trogdorsey
-	Version/Date: 6.0.2 9/1/2017
+	Version/Date: 6.0.3 9/1/2017
 	Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 	Has index-time ops: false
 
 Update History
 ----------------------------
 
+        6.0.3
+ 	--------
+ 	Typo corrected.
+	Special thanks to David Dorsey (https://github.com/trogdorsey) for this contribution.
+ 
         6.0.2
  	--------
  	Field extractions added including but not limited to cmdline, parent_process, 
