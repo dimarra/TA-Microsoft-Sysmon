@@ -1,4 +1,4 @@
-TA-Microsoft-Sysmon v6.0.4
+TA-Microsoft-Sysmon v6.0.5
 ----------------------------       
        
        Original Author: Adrian Hall
@@ -6,14 +6,19 @@ TA-Microsoft-Sysmon v6.0.4
        Contributors: https://github.com/dstaulcu
                      https://github.com/MikeKemmerer
                      https://github.com/trogdorsey
-       Version/Date: 6.0.4 / Sep 9, 2017
+       Version/Date: 6.0.5 / Sep 12, 2017
        Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
        Has index-time ops: false
 
 Update History
 ----------------------------
 
-       6.0.4 Sep 9, 207
+
+       6.0.5 Sep 12, 2017
+       --------
+       Support for new features of Sysmon v6.10
+
+       6.0.4 Sep 9, 2017
        --------
        Prep for Splunk certification.
 
