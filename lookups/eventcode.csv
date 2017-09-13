@@ -17,4 +17,7 @@ EventCode,EventDescription
 16,"Sysmon Configuration Changed"
 17,"Pipe Created"
 18,"Pipe Connected"
+19,"WmiEventFilter activity detected"
+20,"WmiEventConsumer activity detected"
+21,"WmiEventConsumerToFilter activity detected"
 255,"Error"
