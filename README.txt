@@ -6,13 +6,18 @@ TA-Microsoft-Sysmon v6.0.5
        Contributors: https://github.com/dstaulcu
                      https://github.com/MikeKemmerer
                      https://github.com/trogdorsey
-       Version/Date: 6.0.5 / Sep 12, 2017
+       Version/Date: 6.0.6 / Nov 22, 2017
        Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
        Has index-time ops: false
 
 Update History
 ----------------------------
 
+
+       6.0.6 Nov 22, 2017
+       --------
+       Added FIELDALIAS for EventID/EventCode for compatibility with Sigma rules.
+       https://github.com/Neo23x0/sigma 
 
        6.0.5 Sep 12, 2017
        --------
