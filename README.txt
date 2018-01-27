@@ -143,12 +143,13 @@ Recommended Configuration
 
 Previously Recommended Configuration
 ----------------------------
-       3/16/2017 - The following configuration guidance was inlcuded historically
-       but should now be considered deprecated. We suggest instead that you use the SwiftOnSecurity
-       configuration as a starting point, and tune it to meet your needs. You may choose to
-       use elements of the legacy configuration below, particularly if you are interested
-       in exluding common Splunk image/file names from creating Sysmon events. 
-       NOTE: If you choose to excude certain events based on file name, please be aware 
+       3/16/2017 - The following configuration guidance was included historically
+       but should now be considered deprecated. We suggest instead that you use the 
+       SwiftOnSecurity configuration as a starting point, and tune it to meet your needs. 
+       You may choose to use elements of the legacy configuration below, particularly if 
+       you are interested in excluding common Splunk image/file names from creating Sysmon 
+       events. 
+       NOTE: If you choose to exclude certain events based on file name, please be aware 
        that this could potentially be abused by an attacker to hide malicious activity by 
        choosing an excluded name for their malware. If you are not willing to accept this 
        risk, do not use the configuration below.
