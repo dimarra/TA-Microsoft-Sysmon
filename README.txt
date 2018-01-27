@@ -114,8 +114,6 @@ Using this TA
        Ensure that you have at least version 6.2.0 universal forwarders.
        This is because of the Windows XML event log format.
   
-       http://blogs.splunk.com/2014/11/04/splunk-6-2-feature-overview-xml-event-logs/
-
        Sysmon ProcessCreate events may pick up passwords in CommandLine
        and ParentCommandLine fields. Depending on organizational policy you 
        may be required to mask passwords either at search time or prior to
