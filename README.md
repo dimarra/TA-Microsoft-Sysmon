@@ -98,44 +98,41 @@ SEDCMD-pwd_rule1 = s/ -pw ([^\s\<])+/ -pw ***MASK***/g
 For additional info on Sysmon see: http://blogs.splunk.com/2014/11/24/monitoring-network-traffic-with-sysmon-and-splunk/
 
 # Support
+This is a community supported TA. As such, post to answers.splunk.com and reference it. Someone should be with you shortly.
 
-       This is a community supported TA. As such, post to answers.splunk.com
-       and reference it. Someone should be with you shortly.
-
-       Pull requests via github are welcome!
+Pull requests via github are welcome!
 
 # Recommended Configuration
 
-       We strongly recommend that you use the popular Sysmon configuration shared by SwiftOnSecurity 
-       as your starting point:
+We strongly recommend that you use the popular Sysmon configuration shared by SwiftOnSecurity as your starting point:
 
        https://github.com/SwiftOnSecurity/sysmon-config
 
 # Previously Recommended Configuration
-       3/16/2017 - The following configuration guidance was included historically
-       but should now be considered deprecated. We suggest instead that you use the 
-       SwiftOnSecurity configuration as a starting point, and tune it to meet your needs. 
-       You may choose to use elements of the legacy configuration below, particularly if 
-       you are interested in excluding common Splunk image/file names from creating Sysmon 
-       events. 
-       NOTE: If you choose to exclude certain events based on file name, please be aware 
-       that this could potentially be abused by an attacker to hide malicious activity by 
-       choosing an excluded name for their malware. If you are not willing to accept this 
-       risk, do not use the configuration below.
+*3/16/2017* - The following configuration guidance was included historically
+but should now be considered deprecated. We suggest instead that you use the 
+SwiftOnSecurity configuration as a starting point, and tune it to meet your needs. 
+You may choose to use elements of the legacy configuration below, particularly if 
+you are interested in excluding common Splunk image/file names from creating Sysmon 
+events. 
 
-       Sysmon is capable of delivering a large amount of events into your
-       Splunk instance. The following configuration, loaded into each
-       system running Sysmon 3.1 or greater, will reduce the amount of data considerably.
-       Special thanks go to Jeff Walzer from the University of Pittsburgh for
-       originally helping to test this (walzer@pitt.edu).
+*NOTE:* If you choose to exclude certain events based on file name, please be aware 
+that this could potentially be abused by an attacker to hide malicious activity by 
+choosing an excluded name for their malware. If you are not willing to accept this 
+risk, do not use the configuration below.
 
-       Load this via sysmon -c (filename) from an admin-level command prompt.
-       (after you have placed it in a text file). You may get some 
-       unusual errors - these are benign and can be ignored. Check the
-       filtering via a "sysmon -c" with no argument.
+Sysmon is capable of delivering a large amount of events into your
+Splunk instance. The following configuration, loaded into each
+system running Sysmon 3.1 or greater, will reduce the amount of data considerably.
+Special thanks go to Jeff Walzer from the University of Pittsburgh for
+originally helping to test this (walzer@pitt.edu).
 
-       For additional Sysmon filtering, remove the entire ImageLoad 
-       section.
+Load this via sysmon -c (filename) from an admin-level command prompt.
+(after you have placed it in a text file). You may get some 
+unusual errors - these are benign and can be ignored. Check the
+filtering via a "sysmon -c" with no argument.
+
+For additional Sysmon filtering, remove the entire ImageLoad section.
 
 ```
 <Sysmon schemaversion="3.2">
