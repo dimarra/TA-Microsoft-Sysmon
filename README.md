@@ -168,7 +168,7 @@ Previously Recommended Configuration
        For additional Sysmon filtering, remove the entire ImageLoad 
        section.
 
-----------------------------
+```
 <Sysmon schemaversion="3.2">
   <HashAlgorithms>*</HashAlgorithms>
   <EventFiltering>
@@ -226,4 +226,4 @@ Previously Recommended Configuration
     </FileCreateTime>
   </EventFiltering>
 </Sysmon>
-----------------------------
+```
