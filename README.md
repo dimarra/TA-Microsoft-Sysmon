@@ -12,83 +12,78 @@
 
 # Update History
 ## 6.0.7 Nov 24, 2017
-Tested with Sysmon version 6.20
-https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
+* Tested with Sysmon version 6.20
+* https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
 
 ## 6.0.6 Nov 22, 2017
-Added FIELDALIAS for EventID/EventCode for compatibility with Sigma rules.
-https://github.com/Neo23x0/sigma 
+* Added FIELDALIAS for EventID/EventCode for compatibility with Sigma rules.
+* https://github.com/Neo23x0/sigma 
 
 ## 6.0.5 Sep 12, 2017
-Support for new features of Sysmon v6.10
+* Support for new features of Sysmon v6.10
 
 ## 6.0.4 Sep 9, 2017
-Prep for Splunk certification.
+* Prep for Splunk certification.
 
 ## 6.0.3
-Typo corrected.
-Special thanks to David Dorsey (https://github.com/trogdorsey) for this contribution.
+* Typo corrected.
+* Special thanks to David Dorsey (https://github.com/trogdorsey) for this contribution.
 
 ## 6.0.2
-Field extractions added including but not limited to cmdline, parent_process, 
-and parent_process_id.
-Special thanks to David Dorsey (https://github.com/trogdorsey) for this contribution.
+* Field extractions added including but not limited to cmdline, parent_process, 
+* and parent_process_id.
+* Special thanks to David Dorsey (https://github.com/trogdorsey) for this contribution.
 
 ## 6.0.1
-Field extractions for MD5, SHA1, SHA256, IMPHASH
-Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing 
-assistance and contributions 
+* Field extractions for MD5, SHA1, SHA256, IMPHASH
+* Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
 
            
 ## 6.0.0
-Updates to support sysmon V6
-Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing 
-assistance and contributions 
+* Updates to support sysmon V6
+* Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
 
 
 ## 5.0.0
-Updates to support sysmon V5
-Note the sample configuration included below was modified to exclued the 
-ImageLoad section which was found to be causing BSOD on some Windows 7 test 
-systems. Special thanks to David Staulcup 
-(https://github.com/dstaulcu) for ongoing assistance and contributions 
+* Updates to support sysmon V5
+* Note the sample configuration included below was modified to exclued the 
+* ImageLoad section which was found to be causing BSOD on some Windows 7 test systems. 
+* Special thanks to David Staulcup (https://github.com/dstaulcu) for ongoing assistance and contributions 
 
 ## 4.0.0
-Minor updates to support Sysmon V4 and optimize the hash field extraction. 
-See: https://github.com/splunk/TA-microsoft-sysmon/pull/8
-See: https://github.com/splunk/TA-microsoft-sysmon/pull/9
-See: https://github.com/splunk/TA-microsoft-sysmon/pull/10
-See: https://github.com/splunk/TA-microsoft-sysmon/pull/11
+* Minor updates to support Sysmon V4 and optimize the hash field extraction. 
+* See: https://github.com/splunk/TA-microsoft-sysmon/pull/8
+* See: https://github.com/splunk/TA-microsoft-sysmon/pull/9
+* See: https://github.com/splunk/TA-microsoft-sysmon/pull/10
+* See: https://github.com/splunk/TA-microsoft-sysmon/pull/11
 
 ## 3.2.3
-Minor updates to add workflow actions via pull request and subsequent fine 
-tuning.
-See: https://github.com/splunk/TA-microsoft-sysmon/pull/5
-See: https://github.com/splunk/TA-microsoft-sysmon/pull/6
+* Minor updates to add workflow actions via pull request and subsequent fine tuning.
+* See: https://github.com/splunk/TA-microsoft-sysmon/pull/5
+* See: https://github.com/splunk/TA-microsoft-sysmon/pull/6
 
 ## 3.2.2
-Minor updates to extract various hash values into individual fields for convenience:
-https://github.com/splunk/TA-microsoft-sysmon/issues/4
+* Minor updates to extract various hash values into individual fields for convenience:
+* https://github.com/splunk/TA-microsoft-sysmon/issues/4
 
 ## 3.2.1
-Minor updates to align with sysmon version 3.21. For details see:
-https://github.com/splunk/TA-microsoft-sysmon/issues/1
-https://github.com/splunk/TA-microsoft-sysmon/issues/2
-https://github.com/splunk/TA-microsoft-sysmon/issues/3
+* Minor updates to align with sysmon version 3.21. For details see:
+** https://github.com/splunk/TA-microsoft-sysmon/issues/1
+** https://github.com/splunk/TA-microsoft-sysmon/issues/2
+** https://github.com/splunk/TA-microsoft-sysmon/issues/3
 
 ## 3.1.1
-Major modification of the version to better align with SplunkBase.
-Fixed typos in eventtypes.conf and props.conf
+* Major modification of the version to better align with SplunkBase.
+* Fixed typos in eventtypes.conf and props.conf
 
 ## 0.3.1
-Lookup table added to support Sysmon 3.1
-Additional CIM compliance added
-Example config added
-Revved to version 0.3.1 to match current Sysmon version
+* Lookup table added to support Sysmon 3.1
+* Additional CIM compliance added
+* Example config added
+* Revved to version 0.3.1 to match current Sysmon version
 
 
-Using this TA
-----------------------------
+# Using this TA
 
        Configuration: Install TA via GUI on all search heads, install
        via your preferred method (manual or Deployment Server) on
@@ -110,23 +105,21 @@ Using this TA
 
        http://blogs.splunk.com/2014/11/24/monitoring-network-traffic-with-sysmon-and-splunk/
 
-Support
-----------------------------
+# Support
 
        This is a community supported TA. As such, post to answers.splunk.com
        and reference it. Someone should be with you shortly.
 
        Pull requests via github are welcome!
 
-Recommended Configuration
-----------------------------
+# Recommended Configuration
+
        We strongly recommend that you use the popular Sysmon configuration shared by SwiftOnSecurity 
        as your starting point:
 
        https://github.com/SwiftOnSecurity/sysmon-config
 
-Previously Recommended Configuration
-----------------------------
+# Previously Recommended Configuration
        3/16/2017 - The following configuration guidance was included historically
        but should now be considered deprecated. We suggest instead that you use the 
        SwiftOnSecurity configuration as a starting point, and tune it to meet your needs. 
