@@ -85,25 +85,17 @@
 
 # Using this TA
 
-       Configuration: Install TA via GUI on all search heads, install
-       via your preferred method (manual or Deployment Server) on
-       forwarders running on Windows that have Sysmon 3.1 or greater
-       installed
+Configuration: Install TA via GUI on all search heads, install via your preferred method (manual or Deployment Server) on forwarders running on Windows that have Sysmon 3.1 or greater installed.
 
-       Ensure that you have at least version 6.2.0 universal forwarders.
-       This is because of the Windows XML event log format.
+Ensure that you have at least version 6.2.0 universal forwarders to take advantage of Windows XML event log format.
   
-       Sysmon ProcessCreate events may pick up passwords in CommandLine
-       and ParentCommandLine fields. Depending on organizational policy you 
-       may be required to mask passwords either at search time or prior to
-       indexing. SEDCMD entries can be added to props.conf files on 
-       search heads or indexers to mask data in known positions of passwords. 
+Sysmon ProcessCreate events may pick up passwords in CommandLine and ParentCommandLine fields. Depending on organizational policy you may be required to mask passwords either at search time or prior to indexing. SEDCMD entries can be added to props.conf files on search heads or indexers to mask data in known positions of passwords. Note this contribution has not been widely tested and may require substantial additional configuration and tuning effort. Use at your own risk.
 
-       SEDCMD-pwd_rule1 = s/ -pw ([^\s\<])+/ -pw ***MASK***/g
+```
+SEDCMD-pwd_rule1 = s/ -pw ([^\s\<])+/ -pw ***MASK***/g
+```
 
-       For additional info on Sysmon see:
-
-       http://blogs.splunk.com/2014/11/24/monitoring-network-traffic-with-sysmon-and-splunk/
+For additional info on Sysmon see: http://blogs.splunk.com/2014/11/24/monitoring-network-traffic-with-sysmon-and-splunk/
 
 # Support
 
