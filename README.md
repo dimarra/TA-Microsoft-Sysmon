@@ -1,14 +1,14 @@
-TA-Microsoft-Sysmon v6.0.7
-----------------------------       
+# TA-Microsoft-Sysmon v6.0.7
        
-       Original Author: Adrian Hall
-       Current maintainers: Jim Apger, Dave Herrald, James Brodsky 
-       Contributors: https://github.com/dstaulcu
-                     https://github.com/MikeKemmerer
-                     https://github.com/trogdorsey
-       Version/Date: 6.0.7 / Nov 22, 2017
-       Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
-       Has index-time ops: false
+* Original Author: Adrian Hall
+* Current maintainers: Jim Apger, Dave Herrald, James Brodsky 
+* Contributors:
+  * https://github.com/dstaulcu
+  * https://github.com/MikeKemmerer
+  * https://github.com/trogdorsey
+* Version/Date: 6.0.7 / Nov 22, 2017
+* Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
+* Has index-time ops: false
 
 Update History
 ----------------------------
