@@ -10,7 +10,8 @@
 * Has index-time ops: false
 
 # Update History
-## 6.0.8 May 8, 2017
+## 6.0.8
+* May 8, 2018
 * Tested with Sysmon version 6.20
 * https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
 
