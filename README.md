@@ -6,7 +6,6 @@
   * https://github.com/dstaulcu
   * https://github.com/MikeKemmerer
   * https://github.com/trogdorsey
-* Version/Date: 6.0.7 / Nov 22, 2017
 * Sourcetype: XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 * Has index-time ops: false
 
