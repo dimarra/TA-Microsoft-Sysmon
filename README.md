@@ -15,7 +15,6 @@
 * Tested with Sysmon version 6.20
 * https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
 
-# Update History
 ## 6.0.7 Nov 24, 2017
 * Tested with Sysmon version 6.20
 * https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
