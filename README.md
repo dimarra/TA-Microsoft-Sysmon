@@ -11,22 +11,26 @@
 
 # Update History
 ## 6.0.8
-* May 8, 2018
+* June 8, 2018
 * Tested with Sysmon version 6.20
 * https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
 
-## 6.0.7 Nov 24, 2017
+## 6.0.7 
+* Nov 24, 2017
 * Tested with Sysmon version 6.20
 * https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
 
-## 6.0.6 Nov 22, 2017
+## 6.0.6 
+* Nov 22, 2017
 * Added FIELDALIAS for EventID/EventCode for compatibility with Sigma rules.
 * https://github.com/Neo23x0/sigma 
 
-## 6.0.5 Sep 12, 2017
+## 6.0.5 
+* Sep 12, 2017
 * Support for new features of Sysmon v6.10
 
-## 6.0.4 Sep 9, 2017
+## 6.0.4 
+* Sep 9, 2017
 * Prep for Splunk certification.
 
 ## 6.0.3
