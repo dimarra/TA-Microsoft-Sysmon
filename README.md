@@ -15,7 +15,8 @@
 * December 11, 2018
 * Tested with Sysmon version 8.0
 * https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
-* Updates to work with the new Splunk Enpoint 
+* Updates to work with the new Splunk Enpoint Data Model
+** http://docs.splunk.com/Documentation/CIM/4.12.0/User/Endpoint
 * Thanks to Bhavin Patel for contributions (@patel-bhavin)
 
 ## 8.0.0
