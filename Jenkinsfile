@@ -7,5 +7,10 @@ pipeline {
         echo 'hello agan'
       }
     }
+    stage('Inspect') {
+      steps {
+        echo 'splunk appinspect $PATH'
+      }
+    }
   }
 }
