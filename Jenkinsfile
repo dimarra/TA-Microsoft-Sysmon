@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'outcoldsolutions/splunk-appinspect'
-    }
-
-  }
+  agent any
   stages {
     stage('hello') {
       steps {
