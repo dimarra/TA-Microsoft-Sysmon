@@ -1,15 +1,15 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'outcoldsolutions/splunk-appinspect:latest'
+    }
+
+  }
   stages {
     stage('hello') {
       steps {
         echo 'hello world'
         echo 'hello agan'
-      }
-    }
-    stage('Inspect') {
-      steps {
-        echo 'splunk appinspect $PATH'
       }
     }
   }
